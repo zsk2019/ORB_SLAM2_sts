@@ -47,6 +47,9 @@ public:
 
     // Draw last processed frame.
     cv::Mat DrawFrame();
+    int mnTracked, mnTrackedVO;
+     vector<cv::KeyPoint> mvCurrentKeys;
+     int keypoint_tracked[4];
 
 protected:
 
@@ -55,10 +58,9 @@ protected:
     // Info of the frame to be drawn
     cv::Mat mIm;
     int N;
-    vector<cv::KeyPoint> mvCurrentKeys;
+
     vector<bool> mvbMap, mvbVO;
     bool mbOnlyTracking;
-    int mnTracked, mnTrackedVO;
     vector<cv::KeyPoint> mvIniKeys;
     vector<int> mvIniMatches;
     int mState;

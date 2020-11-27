@@ -88,8 +88,12 @@ public:
 
     eTrackingState mState;
     eTrackingState mLastProcessedState;
-
+// the number of Matchepoints
     int mnMatchesInliers;
+    // the number  the number of Matchepoints  different areas
+     int mnMatches[4];
+
+
 
     // Input sensor
     int mSensor;

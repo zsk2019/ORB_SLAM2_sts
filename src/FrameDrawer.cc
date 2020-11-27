@@ -43,6 +43,10 @@ cv::Mat FrameDrawer::DrawFrame()
     vector<cv::KeyPoint> vCurrentKeys; // KeyPoints in current frame
     vector<bool> vbVO, vbMap; // Tracked MapPoints in current frame
     int state; // Tracking state
+    for (int i=0;i<4;i++)
+    {
+        keypoint_tracked[i]=0;
+    }
 
     //Copy variables within scoped mutex
     {
@@ -105,6 +109,25 @@ cv::Mat FrameDrawer::DrawFrame()
                 // This is a match to a MapPoint in the map
                 if(vbMap[i])
                 {
+                    if(vCurrentKeys[i].pt.x<=320)
+                    {
+                         keypoint_tracked[0]++;
+                    }
+                    else
+                    {
+                           keypoint_tracked[1]++;
+                    }
+                    if(vCurrentKeys[i].pt.y<=240)
+                    {
+                         keypoint_tracked[2]++;
+                    }
+                    else
+                    {
+                           keypoint_tracked[3]++;
+                    }
+
+
+
                     cv::rectangle(im,pt1,pt2,cv::Scalar(0,255,0));
                     cv::circle(im,vCurrentKeys[i].pt,2,cv::Scalar(0,255,0),-1);
                     mnTracked++;

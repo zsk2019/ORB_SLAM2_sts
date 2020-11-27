@@ -56,7 +56,7 @@ public:
     long unsigned  KeyFramesInMap();
 
     long unsigned int GetMaxKFid();
-
+     long unsigned int Getmappoint();
     void clear();
 
     vector<KeyFrame*> mvpKeyFrameOrigins;

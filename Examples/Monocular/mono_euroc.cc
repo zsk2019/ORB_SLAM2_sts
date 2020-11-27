@@ -65,6 +65,14 @@ int main(int argc, char **argv)
          cout<<SLAM.getTracker()->mState<<endl;
          cout<<SLAM.getTracker()->mCurrentFrame.mvpMapPoints.size()<<endl;
          cout<<SLAM.getTracker()->mnMatchesInliers<<endl;
+         cout<<SLAM.getviewer()->getframeDrawer()->mvCurrentKeys.size()<<endl;
+         cout<<SLAM.getviewer()->getframeDrawer()->mnTracked<<endl;
+         cout<<"keypoint"<<SLAM.getviewer()->getframeDrawer()->keypoint_tracked[0]<<" "<<SLAM.getviewer()->getframeDrawer()->keypoint_tracked[1]<<endl;
+         cout<<"keypoint"<<SLAM.getviewer()->getframeDrawer()->keypoint_tracked[2]<<" "<<SLAM.getviewer()->getframeDrawer()->keypoint_tracked[3]<<endl;
+         cout<<SLAM.getMap()->Getmappoint()<<endl;
+
+
+
 
 
 

@@ -129,5 +129,8 @@ void Map::clear()
     mvpReferenceMapPoints.clear();
     mvpKeyFrameOrigins.clear();
 }
+long unsigned int Map::Getmappoint(){
+    return (long unsigned int)mspMapPoints.size();
+}
 
 } //namespace ORB_SLAM

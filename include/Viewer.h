@@ -55,7 +55,7 @@ public:
     bool isStopped();
 
     void Release();
-
+    FrameDrawer* getframeDrawer() { return mpFrameDrawer;}
 private:
 
     bool Stop();

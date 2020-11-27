@@ -68,6 +68,7 @@ public:
     Tracking* getTracker(){ return mpTracker; }
     LocalMapping* getLocalMapping(){ return mpLocalMapper; }
     LoopClosing* getLoopClosing(){ return mpLoopCloser; }
+    Viewer* getviewer() {return mpViewer;}
 
     // Proccess the given stereo frame. Images must be synchronized and rectified.
     // Input images: RGB (CV_8UC3) or grayscale (CV_8U). RGB is converted to grayscale.

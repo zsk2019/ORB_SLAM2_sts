@@ -940,6 +940,10 @@ bool Tracking::TrackLocalMap()
     // Optimize Pose
     Optimizer::PoseOptimization(&mCurrentFrame);
     mnMatchesInliers = 0;
+    mnMatches[0]= 0;
+    mnMatches[1]= 0;
+    mnMatches[2]= 0;
+    mnMatches[3]= 0;
 
     // Update MapPoints Statistics
     for(int i=0; i<mCurrentFrame.N; i++)
@@ -952,7 +956,13 @@ bool Tracking::TrackLocalMap()
                 if(!mbOnlyTracking)
                 {
                     if(mCurrentFrame.mvpMapPoints[i]->Observations()>0)
+                    {
+
                         mnMatchesInliers++;
+
+
+                    }
+
                 }
                 else
                     mnMatchesInliers++;
