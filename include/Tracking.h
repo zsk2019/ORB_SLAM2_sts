@@ -89,6 +89,8 @@ public:
     eTrackingState mState;
     eTrackingState mLastProcessedState;
 
+    int mnMatchesInliers;
+
     // Input sensor
     int mSensor;
 
@@ -200,7 +202,7 @@ protected:
     float mDepthMapFactor;
 
     //Current matches in frame
-    int mnMatchesInliers;
+
 
     //Last Frame, KeyFrame and Relocalisation Info
     KeyFrame* mpLastKeyFrame;

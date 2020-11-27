@@ -63,6 +63,10 @@ int main(int argc, char **argv)
          // Pass the image to the SLAM system
          SLAM.TrackMonocular(image_flip, double(timestamp.count())/1000.0);
          cout<<SLAM.getTracker()->mState<<endl;
+         cout<<SLAM.getTracker()->mCurrentFrame.mvpMapPoints.size()<<endl;
+         cout<<SLAM.getTracker()->mnMatchesInliers<<endl;
+
+
 
     }
 
